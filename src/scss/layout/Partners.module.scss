@@ -1,0 +1,12 @@
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 -2rem;
+  text-align: center;
+
+  .card {
+    margin: 1rem 2rem;
+  }
+}

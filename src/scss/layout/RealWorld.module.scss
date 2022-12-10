@@ -1,0 +1,36 @@
+@use "../utils" as u;
+
+.wrapper {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      max-width: u.em(300);
+    }
+
+    p {
+      max-width: u.rem(684);
+    }
+  }
+
+  main {
+    display: flex;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(80);
+    }
+  }
+
+  @include u.breakpoint(xLarge) {
+    main {
+      display: grid;
+      gap: 2rem;
+
+      & > :not(:last-child) {
+        margin-right: u.rem(0);
+      }
+    }
+  }
+}

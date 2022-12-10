@@ -1,0 +1,21 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.button {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20rem;
+  padding: 1rem 2rem;
+  color: white;
+  letter-spacing: 0.06em;
+}
+
+.button.pink {
+  border: 1px solid colors.$pink;
+  background-color: colors.$pink;
+}
+
+@include u.breakpoint(large) {
+  .button {
+    padding: 0.6rem 1.4rem;
+  }
+}
